@@ -155,7 +155,7 @@ class FluidContext implements FluidInterface, \ArrayAccess, \Iterator
                 return $this->query(...$query);
         }
 
-        public function times($times, callable $fn = null): FluidRepeater|static
+        public function times($times, ?callable $fn = null): FluidRepeater|static
         {
                 if ($fn === null) {
                         return new FluidRepeater($this->document, $this->handler, $this, $times);
